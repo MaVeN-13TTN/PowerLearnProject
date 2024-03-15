@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif; /* Set a basic font */
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px; /* Add space below each label */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+      width: 100%; /* Set consistent width for input elements */
+      padding: 5px; /* Add padding for better visual separation */
+      border: 1px solid #ccc; /* Create a thin border */
+      border-radius: 3px; /* Add rounded corners for a smoother look */
+    }
+
+    fieldset {
+      border: 1px solid #ddd; /* Create a border for each fieldset */
+      padding: 10px; /* Add padding within each fieldset */
+      margin-bottom: 15px; /* Add space between fieldsets */
+    }
+
+    legend {
+      font-weight: bold;
+      margin-bottom: 5px; /* Add space below the legend */
+    }
+
+    /* New rules to display radio buttons horizontally */
+    fieldset[name="gender"] {
+    display: flex;
+    align-items: center;
+    }
+  
+    fieldset[name="gender"] label {
+    margin-right: 10px;
+    margin-bottom: 0;
+    }
+
+    button {
+      padding: 8px 15px; /* Set padding for buttons */
+      background-color: #4CAF50; /* Green color for submit button */
+      color: white; /* White text for submit button */
+      border: none; /* Remove default button border */
+      border-radius: 4px; /* Add rounded corners */
+      cursor: pointer; /* Change cursor to indicate clickability */
+    }
+
+    button:hover {
+      background-color: #45A049; /* Slightly darker green on hover */
+    }
+  </style>
+</head>
+<body>
+  <h1>Student Registration Form</h1>
+  <form>
+    <fieldset>
+      <legend>Personal Information</legend>
+      <label for="name">Name: </label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+    </fieldset>
+
+    <fieldset name="gender">
+      <legend>Gender:</legend>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Male</label>
+
+      <input type="radio" id="female" name="gender" value="female" required>
+      <label for="female">Female</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Contact Information</legend>
+      <label for="telephone">Telephone:</label>
+      <input type="tel" id="telephone" name="telephone" required><br>
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" required></textarea><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Course Selection</legend>
+      <label for="course">Course:</label>
+      <select id="course" name="course" required>
+        <option value="">Select a course</option>
+        <option value="computer-science">Computer Science</option>
+        <option value="engineering">Engineering</option>
+        <option value="business">Business</option>
+        <option value="arts">Arts</option>
+      </select><br><br>
+    </fieldset>
+
+    <button type="submit">Register</button>
+    <button type="reset">Cancel</button>
+  </form>
+</body>
+</html>
